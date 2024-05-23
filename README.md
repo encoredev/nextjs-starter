@@ -21,13 +21,13 @@ npm install      # Install dependencies
 encore app init  # Create a new Encore application. Take note of the App ID
 ```
 
-3. Add `"experiments": ["typescript"]` to the `encore.app` file to enable TypeScript support.
+3. Add `"lang": "typescript"` to the `encore.app` file to enable TypeScript support.
 Your `encore.app` file should look like this:
 
 ```json
 {
   "name": "<APP_ID>",
-  "experiments": ["typescript"]
+  "lang": "typescript"
 }
 ```
 
