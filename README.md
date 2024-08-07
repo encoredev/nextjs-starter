@@ -77,7 +77,7 @@ Here you can see the request you just made and a view a trace of the response.
 Keep the contract between the backend and frontend in sync by regenerating the request client whenever you make a change
 to an Encore endpoint.
 
-In the `gen` npm scripts, replace `next-js-test-ts-9wvi` with the ID of your Encore application.
+In the `gen` npm scripts, replace `{{ENCORE_APP_ID}}` with the ID of your Encore application.
 
 ```bash
 npm run gen # Will create a new request client frontend/app/lib/client.ts
