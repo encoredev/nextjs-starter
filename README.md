@@ -21,13 +21,18 @@ npm install      # Install dependencies
 encore app init  # Create a new Encore application. Take note of the App ID
 ```
 
-3. Add `"lang": "typescript"` to the `encore.app` file to enable TypeScript support.
+3. If not automatically added. Add `"lang": "typescript"` to the `encore.app` file to enable TypeScript support.
 Your `encore.app` file should look like this:
 
 ```json
 {
-  "name": "<APP_ID>",
-  "lang": "typescript"
+	"id": "<APP_ID>",
+	"lang": "typescript",
+	"build": {
+		"docker": {
+			"bundle_source": true
+		}
+	}
 }
 ```
 
@@ -72,7 +77,7 @@ Here you can see the request you just made and a view a trace of the response.
 Keep the contract between the backend and frontend in sync by regenerating the request client whenever you make a change
 to an Encore endpoint.
 
-In the `gen` npm scripts, replace `next-js-test-ts-9wvi` with the ID of your Encore application.
+In the `gen` npm scripts, replace `{{ENCORE_APP_ID}}` with the ID of your Encore application.
 
 ```bash
 npm run gen # Will create a new request client frontend/app/lib/client.ts
