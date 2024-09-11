@@ -21,26 +21,16 @@ npm install      # Install dependencies
 encore app init  # Create a new Encore application. Take note of the App ID
 ```
 
-3. Add `"lang": "typescript"` to the `encore.app` file to enable TypeScript support.
-Your `encore.app` file should look like this:
-
-```json
-{
-  "name": "<APP_ID>",
-  "lang": "typescript"
-}
-```
-
-4. Run your Encore application (keep it running):
+3. Run your Encore application (keep it running):
 
 ```bash
 encore run # Inside the backend directory
 ```
 
-5. In the `frontend/package.json`, replace `{{ENCORE_APP_ID}}` with the ID of your Encore application.
+4. In the `frontend/package.json`, replace `{{ENCORE_APP_ID}}` with the ID of your Encore application. You can see the app id in the `encore.app` file.
 
 
-6. Open a new terminal window and generate a new request client:
+5. Open a new terminal window and generate a new request client:
     
 ```bash
 npm run gen # Inside the frontend directory
